@@ -15,10 +15,10 @@ public class CrystalMountainsBiome extends BetterEndBiome
 				                  setFoliageColor(255, 133, 211).
 				                  setMusic(BetterEndMusicNames.MUSIC_OPENSPACE).
 				                  setSurface(ModBlocks.CRYSTAL_MOSS).
+				                  addFeature(Decoration.RAW_GENERATION, ModConfiguredFeatures.CRYSTAL_MOUNTAIN).
 				                  addFeature(Decoration.RAW_GENERATION, ModConfiguredFeatures.ROUND_CAVE).
 				                  addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.CRYSTAL_GRASS).
 				                  addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.CAVE_GRASS).
-				                  //addStructure(ModConfiguredStructures.MOUNTAIN_STRUCTURE).
 				                  addMobSpawn(EnumCreatureType.MONSTER, EntityEnderman.class, 50, 1, 2));
 	}
 }

@@ -7,6 +7,7 @@ import mod.beethoven92.betterendforge.client.gui.GuiHandler;
 import mod.beethoven92.betterendforge.common.init.*;
 import mod.beethoven92.betterendforge.common.integration.vanilla.OreDictRegistry;
 import mod.beethoven92.betterendforge.common.teleporter.EndPortals;
+import mod.beethoven92.betterendforge.common.event.forge.EndTerrainGeneration;
 import mod.beethoven92.betterendforge.common.world.feature.BiomeNBTStructures;
 import mod.beethoven92.betterendforge.common.world.generator.GeneratorOptions;
 import mod.beethoven92.betterendforge.config.Configs;
@@ -18,6 +19,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
@@ -51,6 +53,8 @@ public class BetterEnd {
 
 	@Mod.EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
+		// PopulateChunkEvent is posted on Forge's terrain-generation bus.
+		MinecraftForge.TERRAIN_GEN_BUS.register(new EndTerrainGeneration());
 		ModStructurePieces.registerAllPieces();
 
 		ModEntityTypes.registryEntities();

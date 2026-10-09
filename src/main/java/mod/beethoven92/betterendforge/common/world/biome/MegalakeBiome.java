@@ -36,7 +36,6 @@ public class MegalakeBiome extends BetterEndBiome
 				addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.CHARNIA_CYAN).
 				addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.CHARNIA_LIGHT_BLUE).
 				addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.CHARNIA_RED_RARE).
-				//addStructure(ModConfiguredStructures.MEGALAKE_STRUCTURE).
 				addMobSpawn(EnumCreatureType.MONSTER, EntityEnderman.class, 10, 1, 2).
 				addMobSpawn(EnumCreatureType.AMBIENT, DragonflyEntity.class, 50, 1, 3).
 				addMobSpawn(EnumCreatureType.AMBIENT, CubozoaEntity.class, 50, 3, 8).

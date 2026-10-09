@@ -27,7 +27,6 @@ public class MegalakeGroveBiome extends BetterEndBiome
 				setMusic(BetterEndMusicNames.MUSIC_WATER).
 				setAmbientSound(ModSoundEvents.AMBIENT_MEGALAKE_GROVE).
 				setSurface(ModBlocks.END_MOSS).
-				//addStructure(ModConfiguredStructures.MEGALAKE_SMALL_STRUCTURE).
 				addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.LACUGROVE).
 				addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.END_LOTUS).
 				addFeature(Decoration.VEGETAL_DECORATION, ModConfiguredFeatures.END_LOTUS_LEAF).
