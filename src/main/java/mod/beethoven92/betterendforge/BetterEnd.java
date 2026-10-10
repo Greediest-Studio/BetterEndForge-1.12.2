@@ -2,7 +2,6 @@ package mod.beethoven92.betterendforge;
 
 import mod.beethoven92.betterendforge.client.ClientOptions;
 import mod.beethoven92.betterendforge.client.PhysicalClientSide;
-import mod.beethoven92.betterendforge.client.audio.MusicRegister;
 import mod.beethoven92.betterendforge.client.gui.GuiHandler;
 import mod.beethoven92.betterendforge.common.init.*;
 import mod.beethoven92.betterendforge.common.integration.vanilla.OreDictRegistry;
@@ -88,7 +87,6 @@ public class BetterEnd {
 		OreDictRegistry.registerOres();
 		if(event.getSide()==Side.CLIENT) {
 			PhysicalClientSide.registerTileRenderers();
-			MusicRegister.INSTANCE.registerMusic();
 		}
 		if (Loader.isModLoaded("tconstruct")) {
 			try {
