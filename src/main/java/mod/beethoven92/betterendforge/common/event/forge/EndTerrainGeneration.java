@@ -1,6 +1,7 @@
 package mod.beethoven92.betterendforge.common.event.forge;
 
 import mod.beethoven92.betterendforge.common.world.generator.LakeShore;
+import mod.beethoven92.betterendforge.common.world.generator.SulphurWaterOreCleaner;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
@@ -19,6 +20,9 @@ public final class EndTerrainGeneration
 	{
 		World world = event.getWorld();
 		if (!world.isRemote && world.provider.getDimension() == 1)
+		{
+			SulphurWaterOreCleaner.clear(world, new BlockPos(event.getChunkX() << 4, 0, event.getChunkZ() << 4));
 			LakeShore.seal(world, new BlockPos(event.getChunkX() << 4, 0, event.getChunkZ() << 4));
+		}
 	}
 }
